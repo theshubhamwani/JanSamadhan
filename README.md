@@ -1,11 +1,11 @@
-# SamasyaSetu — Professional Static Frontend
+# JanSamadhan — Professional Static Frontend
 
-A cleaned, responsive, dependency-light static prototype for **SamasyaSetu — समस्यासेतु · The Problem Bridge**.
+A cleaned, responsive, dependency-light static prototype for **JanSamadhan — जनसमाधान · The Problem Bridge**.
 
 ## Structure
 
 ```text
-SamasyaSetu-Professional/
+JanSamadhan-Professional/
 ├── index.html
 ├── README.md
 ├── .gitignore
