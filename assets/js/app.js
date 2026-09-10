@@ -1,5 +1,5 @@
 /* =====================================================================
-  SamasyaSetu — all logic runs locally in the browser. No servers.
+  JanSamadhan — all logic runs locally in the browser. No servers.
   ===================================================================== */
 
 /* ---------- 1. i18n dictionary (EN / MR / HI) ---------- */
@@ -7,7 +7,7 @@ const I18N = {
 en:{
  "nav.bridge":"The Bridge","nav.roles":"Who carries it","nav.report":"Report","nav.registry":"Registry","nav.partner":"Partner","nav.cta":"Report a problem",
  "hero.h1a":"Every problem reported here","hero.h1b":"has somewhere to go.",
- "hero.sub":"SamasyaSetu connects citizens who face real problems with universities, students and industries who can solve them — from first report to measurable social impact.",
+ "hero.sub":"JanSamadhan connects citizens who face real problems with universities, students and industries who can solve them — from first report to measurable social impact.",
  "hero.cta1":"Report a problem","hero.cta2":"Walk the bridge",
  "stat.s1":"Problems reported","stat.s2":"Partner institutions","stat.s3":"Prototypes & pilots","stat.s4":"Citizens impacted",
  "bridge.kicker":"The journey","bridge.title":"One bridge, ten stages, zero dead ends.",
@@ -49,12 +49,12 @@ en:{
  "p.kicker":"Partnerships","p.title":"Carry the bridge with us.",
  "p.uniT":"Universities & colleges","p.uniD":"Adopt problems matched to your departments and expertise. Guide student teams. Publish outcomes your city can use.",
  "p.indT":"Industries & startups","p.indD":"Fund builds, mentor teams, open your testing grounds — and reach markets that genuinely need what you make.",
- "p.govt":"<b>Government & local bodies</b> can route verified civic problems and adopt ready solutions — write to setu@samasyasetu.in",
+ "p.govt":"<b>Government & local bodies</b> can route verified civic problems and adopt ready solutions — write to setu@jan-samadhan.in",
  "p.org":"Institution or company","p.email":"Official email","p.join":"Join as a partner",
  "p.okName":"Add your organisation's name.","p.okMail":"That email doesn't look right.","p.ok":"Welcome aboard — our partnerships team will reach out.",
  "footer.nav":"Explore","footer.contact":"Write to us",
  "footer.note":"A concept platform. All AI analysis runs locally in your browser — nothing leaves this page.",
- "footer.rights":"© 2025 SamasyaSetu · Built for Bharat's problem-solvers",
+ "footer.rights":"© 2025 JanSamadhan · Built for Bharat's problem-solvers",
  "t.sub":"Report #{id} is on the bridge.","t.adv":"Moved to: {stage}","t.imp":"Social impact recorded — bridge complete.",
  "t.dup":"Possible duplicate — check the analysis panel.","langName":"English"
 },
