@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SamasyaSetu — समस्यासेतु · The Problem Bridge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Archivo:wght@400;500;600;700&family=Tiro+Devanagari+Marathi:ital@0;1&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<div class="grain"></div>
+<div class="topline"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+ <div class="wrap">
+  <a class="logo" href="#top" aria-label="SamasyaSetu home">
+   <svg viewBox="0 0 30 20" fill="none"><path d="M1 17 Q15 -4 29 17" stroke="var(--ink)" stroke-width="1.8"/><path d="M1 17 Q15 26 29 17" stroke="var(--acc)" stroke-width="1.8"/><circle cx="15" cy="6.5" r="2.4" fill="var(--acc)"/></svg>
+   <span class="lw">Samasya<span>Setu</span></span>
+  </a>
+  <nav class="nav-links">
+   <a href="#bridge" data-i18n="nav.bridge"></a>
+   <a href="#roles" data-i18n="nav.roles"></a>
+   <a href="#report" data-i18n="nav.report"></a>
+   <a href="#registry" data-i18n="nav.registry"></a>
+   <a href="#partner" data-i18n="nav.partner"></a>
+  </nav>
+  <div class="langs" role="group" aria-label="Language">
+   <button class="lang-btn on" data-lang="en">EN</button>
+   <button class="lang-btn" data-lang="mr">मराठी</button>
+   <button class="lang-btn" data-lang="hi">हिंदी</button>
+  </div>
+  <a class="btn" href="#report"><span data-i18n="nav.cta"></span><i data-lucide="megaphone"></i></a>
+  <button class="burger" id="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mnav"><i data-lucide="menu"></i></button>
+ </div>
+ <div class="mnav" id="mnav">
+  <a href="#bridge" data-i18n="nav.bridge"></a>
+  <a href="#roles" data-i18n="nav.roles"></a>
+  <a href="#report" data-i18n="nav.report"></a>
+  <a href="#registry" data-i18n="nav.registry"></a>
+  <a href="#partner" data-i18n="nav.partner"></a>
+ </div>
+</header>
+
+<main id="top">
+ <!-- ============ HERO ============ -->
+ <section class="hero">
+  <div class="wrap">
+   <span class="stamp" id="heroStamp">समस्या → उपाय</span>
+   <div class="hero-grid">
+    <h1><span data-i18n="hero.h1a"></span> <em data-i18n="hero.h1b"></em></h1>
+    <div>
+     <p class="hero-sub" data-i18n="hero.sub"></p>
+     <div class="hero-ctas">
+      <a class="btn" href="#report"><span data-i18n="hero.cta1"></span><i data-lucide="arrow-right"></i></a>
+      <a class="btn ghost" href="#bridge"><span data-i18n="hero.cta2"></span><i data-lucide="move-down-right"></i></a>
+     </div>
+    </div>
+   </div>
+   <div class="stats">
+    <div class="stat"><b data-count="1284">0</b><span data-i18n="stat.s1"></span></div>
+    <div class="stat"><b data-count="46">0</b><span data-i18n="stat.s2"></span></div>
+    <div class="stat"><b data-count="172">0</b><span data-i18n="stat.s3"></span></div>
+    <div class="stat"><b data-count="312400">0</b><span data-i18n="stat.s4"></span></div>
+   </div>
+  </div>
+ </section>
+
+ <!-- ============ THE BRIDGE ============ -->
+ <section class="bridge-sec sec" id="bridge">
+  <div class="wrap">
+   <div class="kick"><b>01</b><i class="kline"></i><span data-i18n="bridge.kicker"></span></div>
+   <h2 class="title" data-i18n="bridge.title"></h2>
+   <p class="sub" data-i18n="bridge.hint"></p>
+
+   <div class="bridge-vis">
+    <svg id="bridgeSvg" viewBox="0 0 1200 340" aria-hidden="true">
+     <line x1="0" y1="298" x2="1200" y2="298" stroke="#3a342b" stroke-dasharray="2 10"/>
+     <line x1="0" y1="316" x2="1200" y2="316" stroke="#3a342b" stroke-dasharray="2 10"/>
+     <path id="archPath" d="M 40 250 Q 600 430 1160 250" stroke="#5a5243" stroke-width="1.4" fill="none" opacity=".55"/>
+     <g id="suspenders" stroke="#4a4336" stroke-width="1"></g>
+     <path id="deckPath" d="M 40 250 Q 600 60 1160 250" stroke="var(--cream)" stroke-width="2.4" fill="none"/>
+     <rect x="26" y="242" width="28" height="34" fill="#2a251e" stroke="#5a5243"/>
+     <rect x="1146" y="242" width="28" height="34" fill="#2a251e" stroke="#5a5243"/>
+     <g id="nodes"></g>
+     <circle id="pulse" r="5.5" fill="var(--acc)" opacity="0"/>
+    </svg>
+    <div class="b-labels" id="bLabels"></div>
+   </div>
+
+   <div class="stage-panel">
+    <div class="sp-num"><span id="spNum">01</span><small>/10</small></div>
+    <div><div class="sp-name" id="spName"></div><p class="sp-desc" id="spDesc"></p></div>
+    <div class="sp-actors"><b data-i18n="bridge.actors"></b><span id="spActors"></span></div>
+    <div class="sp-nav">
+     <button id="spPrev" aria-label="Previous stage"><i data-lucide="arrow-left"></i></button>
+     <button id="spNext" aria-label="Next stage"><i data-lucide="arrow-right"></i></button>
+    </div>
+   </div>
+  </div>
+ </section>
+
+ <!-- ============ ROLES ============ -->
+ <section class="sec" id="roles">
+  <div class="wrap">
+   <div class="kick reveal"><b>02</b><i class="kline"></i><span data-i18n="roles.kicker"></span></div>
+   <h2 class="title reveal" data-i18n="roles.title"></h2>
+   <div class="roles-list">
+    <div class="role-row reveal">
+     <span class="rn">01</span>
+     <h3 data-i18n="roles.r1t"></h3>
+     <p data-i18n="roles.r1d"></p>
+     <span class="rv"><span data-i18n="roles.r1v"></span><i data-lucide="arrow-up-right"></i></span>
+    </div>
+    <div class="role-row reveal">
+     <span class="rn">02</span>
+     <h3 data-i18n="roles.r2t"></h3>
+     <p data-i18n="roles.r2d"></p>
+     <span class="rv"><span data-i18n="roles.r2v"></span><i data-lucide="arrow-up-right"></i></span>
+    </div>
+    <div class="role-row reveal">
+     <span class="rn">03</span>
+     <h3 data-i18n="roles.r3t"></h3>
+     <p data-i18n="roles.r3d"></p>
+     <span class="rv"><span data-i18n="roles.r3v"></span><i data-lucide="arrow-up-right"></i></span>
+    </div>
+   </div>
+  </div>
+ </section>
+
+ <!-- ============ REPORT ============ -->
+ <section class="sec report-section" id="report">
+  <div class="wrap">
+   <div class="kick reveal"><b>03</b><i class="kline"></i><span data-i18n="form.kicker"></span></div>
+   <h2 class="title reveal" data-i18n="form.title"></h2>
+   <p class="sub reveal" data-i18n="form.sub"></p>
+
+   <div class="report-grid" id="reportGrid">
+    <!-- form -->
+    <form id="reportForm" novalidate>
+     <div class="f-2col">
+      <div class="field"><label for="fName" data-i18n="f.name"></label><input id="fName" type="text" autocomplete="name"></div>
+      <div class="field"><label for="fContact" data-i18n="f.contact"></label><input id="fContact" type="text"></div>
+     </div>
+     <div class="field">
+      <label for="fPlace" data-i18n="f.place"></label>
+      <input id="fPlace" type="text" data-i18n-ph="f.placePh">
+      <button type="button" class="tool-btn geo-btn" id="geoBtn"><i data-lucide="map-pin"></i><span data-i18n="f.loc"></span></button>
+      <div class="geo-note" id="geoNote"></div>
+     </div>
+     <div class="field">
+      <label for="fCat" data-i18n="f.cat"></label>
+      <select id="fCat">
+       <option value="" data-i18n="f.auto"></option>
+       <option value="water" data-i18n="cat.water"></option>
+       <option value="agri" data-i18n="cat.agri"></option>
+       <option value="health" data-i18n="cat.health"></option>
+       <option value="sani" data-i18n="cat.sani"></option>
+       <option value="edu" data-i18n="cat.edu"></option>
+       <option value="env" data-i18n="cat.env"></option>
+       <option value="acc" data-i18n="cat.acc"></option>
+       <option value="rural" data-i18n="cat.rural"></option>
+       <option value="urban" data-i18n="cat.urban"></option>
+      </select>
+     </div>
+     <div class="field">
+      <label for="fDesc" data-i18n="f.desc"></label>
+      <textarea id="fDesc" rows="5" data-i18n-ph="f.descPh"></textarea>
+      <div class="f-tools">
+       <button type="button" class="tool-btn" id="voiceBtn"><i data-lucide="mic"></i><span data-i18n="f.voice"></span></button>
+       <button type="button" class="tool-btn" id="photoBtn"><i data-lucide="camera"></i><span data-i18n="f.photo"></span></button>
+       <input type="file" id="photoInput" accept="image/*" hidden>
+      </div>
+      <div class="f-photo-row" id="photoRow" hidden></div>
+     </div>
+     <div class="f-err" id="formErr"></div>
+     <button class="btn" type="submit"><span data-i18n="f.submit"></span><i data-lucide="send"></i></button>
+     <p class="form-note" data-i18n="f.note"></p>
+    </form>
+
+    <!-- live analysis -->
+    <aside class="an idle" id="anPanel">
+     <div class="an-head"><i class="dot"></i><b data-i18n="an.title"></b><small>AI · on-device</small></div>
+     <div class="an-body">
+      <div class="an-wait" id="anWait"><i data-lucide="pen-line"></i><span data-i18n="an.waiting"></span></div>
+      <div class="an-sec">
+       <div class="an-lab" data-i18n="an.cat"></div>
+       <div class="an-cat"><b id="anCat">—</b><small><span id="anConf">0</span>% <span data-i18n="an.conf"></span></small></div>
+       <div class="bar" role="progressbar" aria-label="AI confidence" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i id="anConfBar"></i></div>
+      </div>
+      <div class="an-sec">
+       <div class="an-lab" data-i18n="an.prio"></div>
+       <div class="an-prio">
+        <svg viewBox="0 0 120 70">
+         <path d="M10 62 A50 50 0 0 1 110 62" stroke="var(--line)" stroke-width="3" fill="none"/>
+         <path d="M10 62 A50 50 0 0 1 60 12" stroke="var(--acc)" stroke-width="3" fill="none" opacity=".28"/>
+         <line id="needle" x1="60" y1="62" x2="60" y2="18" stroke="var(--ink)" stroke-width="2.5"/>
+         <circle cx="60" cy="62" r="4.5" fill="var(--ink)"/>
+         <text id="anScore" x="60" y="50" text-anchor="middle" font-family="Fraunces" font-size="21" font-weight="600" fill="var(--ink)">—</text>
+        </svg>
+        <div><div class="word" id="anPrioWord">—</div></div>
+       </div>
+      </div>
+      <div class="an-sec">
+       <div class="an-lab" data-i18n="an.kw"></div>
+       <div class="an-kws" id="anKw"><span data-i18n="an.kwNone"></span></div>
+      </div>
+      <div class="an-sec">
+       <div class="an-lab" data-i18n="an.dup"></div>
+       <div class="an-dup okay" id="anDup"><i data-lucide="shield-check"></i><span data-i18n="an.dupNone"></span></div>
+      </div>
+      <div class="an-sec">
+       <div class="an-lab" data-i18n="an.inst"></div>
+       <div id="anInst"></div>
+      </div>
+     </div>
+    </aside>
+   </div>
+
+   <!-- success block -->
+   <div class="ok-block" id="okBlock" hidden>
+    <div class="big"><i data-lucide="badge-check"></i><span data-i18n="ok.title"></span></div>
+    <p id="okBody"></p>
+    <button class="btn" id="okView"><span data-i18n="ok.view"></span><i data-lucide="arrow-right"></i></button>
+    <button class="btn ghost" id="okAnother"><span data-i18n="ok.another"></span></button>
+   </div>
+  </div>
+ </section>
+
+ <!-- ============ REGISTRY ============ -->
+ <section class="sec" id="registry">
+  <div class="wrap">
+   <div class="kick reveal"><b>04</b><i class="kline"></i><span data-i18n="reg.kicker"></span></div>
+   <h2 class="title reveal" data-i18n="reg.title"></h2>
+   <div class="reg-controls">
+    <div class="chips" id="chips"></div>
+    <div class="search"><input id="regSearch" type="text" data-i18n-ph="reg.search"><i data-lucide="search"></i></div>
+   </div>
+   <div class="reg-list" id="regList"></div>
+   <p class="reg-foot" id="regCount"></p>
+  </div>
+ </section>
+
+ <!-- ============ PARTNER ============ -->
+ <section class="partner sec" id="partner">
+  <div class="wrap">
+   <div class="kick"><b>05</b><i class="kline"></i><span data-i18n="p.kicker"></span></div>
+   <h2 class="title" data-i18n="p.title"></h2>
+   <div class="p-grid">
+    <div class="p-col">
+     <h3><i data-lucide="graduation-cap"></i><span data-i18n="p.uniT"></span></h3>
+     <p data-i18n="p.uniD"></p>
+     <form class="p-form" novalidate>
+      <input type="text" data-i18n-ph="p.org" class="pf-name">
+      <input type="email" data-i18n-ph="p.email" class="pf-mail">
+      <div class="f-err"></div>
+      <button class="btn light" type="submit"><span data-i18n="p.join"></span><i data-lucide="arrow-right"></i></button>
+     </form>
+    </div>
+    <div class="p-col">
+     <h3><i data-lucide="factory"></i><span data-i18n="p.indT"></span></h3>
+     <p data-i18n="p.indD"></p>
+     <form class="p-form" novalidate>
+      <input type="text" data-i18n-ph="p.org" class="pf-name">
+      <input type="email" data-i18n-ph="p.email" class="pf-mail">
+      <div class="f-err"></div>
+      <button class="btn light" type="submit"><span data-i18n="p.join"></span><i data-lucide="arrow-right"></i></button>
+     </form>
+    </div>
+   </div>
+   <p class="p-govt" data-i18n="p.govt"></p>
+  </div>
+ </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+ <div class="wrap">
+  <div class="f-top">
+   <div>
+    <div class="f-word">Samasya<span>Setu</span></div>
+    <p class="f-tag">समस्येपासून उपायापर्यंत — एकच सेतू.</p>
+   </div>
+   <div>
+    <h5 data-i18n="footer.nav"></h5>
+    <a href="#bridge" data-i18n="nav.bridge"></a>
+    <a href="#report" data-i18n="nav.report"></a>
+    <a href="#registry" data-i18n="nav.registry"></a>
+    <a href="#partner" data-i18n="nav.partner"></a>
+   </div>
+   <div>
+    <h5 data-i18n="footer.contact"></h5>
+    <a href="mailto:setu@samasyasetu.in">setu@samasyasetu.in</a>
+    <p class="f-note footer-note" data-i18n="footer.note"></p>
+   </div>
+  </div>
+  <div class="f-bot">
+   <span data-i18n="footer.rights"></span>
+   <span>English · मराठी · हिंदी</span>
+  </div>
+ </div>
+</footer>
+
+<!-- ============ MODAL ============ -->
+<div class="overlay" id="overlay">
+ <div class="modal" role="dialog" aria-modal="true">
+  <button class="m-close" id="mClose" aria-label="Close"><i data-lucide="x"></i></button>
+  <div class="m-grid">
+   <div class="m-left" id="mLeft"></div>
+   <div class="m-right" id="mRight"></div>
+  </div>
+ </div>
+</div>
+
+<div class="toasts" id="toasts" aria-live="polite" aria-atomic="true"></div>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
