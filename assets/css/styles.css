@@ -350,7 +350,6 @@ footer a:hover{opacity:1;color:#E8987A}
  .search{margin-left:0;width:100%}
  .search input{width:100%}
  .nav .btn span{display:none}
-}
 
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto}
