@@ -1,6 +1,6 @@
 # JanSamadhan — Professional Static Frontend
 
-A cleaned, responsive, dependency-light static prototype for **JanSamadhan — जनसमाधान · The Problem Bridge**.
+A Cleaned, Responsive, Dependency-light static prototype for **JanSamadhan — जनसमाधान · The Problem Bridge**.
 
 ## Structure
 
